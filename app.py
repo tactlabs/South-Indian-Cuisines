@@ -31,8 +31,7 @@ def api_get_data():
 
 '''
 http://0.0.0.0:3000/api/add
-http://0.0.0.0:3000/api/add?year=2017&ontario_tourist=20345&quebec_tourist=200
-http://0.0.0.0:3000/api/add?year=2021&pytorch=180&tensorFlow=90
+http://0.0.0.0:3000/api/add?food=cake&carbohydrates=20&protein=10&fat=5
 '''
 
 
