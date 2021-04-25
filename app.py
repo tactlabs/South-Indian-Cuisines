@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 PORT = int(os.environ.get('PORT', 4000))
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def startpy():
 
     return render_template("index.html")
@@ -31,22 +31,22 @@ http://0.0.0.0:3000/api/add?food=cake&carbohydrates=20&protein=10&fat=5
 '''
 
 
-@app.route("/api/add", methods=["GET"])
-def api_add_data():
-    food = request.values.get('food')
-    carbohydrates = request.values.get('carbohydrates')
-    protein = request.values.get('protein')
-    fat = request.values.get('fat')
+# @app.route("/api/add", methods=["GET"])
+# def api_add_data():
+#     food = request.values.get('food')
+#     carbohydrates = request.values.get('carbohydrates')
+#     protein = request.values.get('protein')
+#     fat = request.values.get('fat')
 
-    result = {
-        'food': food,
-        'carbohydrates': carbohydrates,
-        'protein': protein,
-        'fat': fat
+#     result = {
+#         'food': food,
+#         'carbohydrates': carbohydrates,
+#         'protein': protein,
+#         'fat': fat
 
-    }
-    result_data = fn.add_row(food, carbohydrates, protein, fat)
-    return jsonify(result)
+#     }
+#     result_data = fn.add_row(food, carbohydrates, protein, fat)
+#     return jsonify(result)
 
 
 if __name__ == "__main__":
