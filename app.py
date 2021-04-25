@@ -7,12 +7,8 @@ import os
 app = Flask(__name__)
 PORT = int(os.environ.get('PORT', 4000))
 
-@app.route("/", methods=["GET", "POST"])
+@app.route("/")
 def startpy():
-
-    result = {
-        "Greetings": "Tactlabs welcomes you"
-    }
 
     return render_template("index.html")
 
