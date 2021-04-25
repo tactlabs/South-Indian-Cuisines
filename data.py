@@ -7,14 +7,14 @@ def get_data():
     
     print(df['food'].tolist())
     food            = df['food'].tolist()
-     carbohydrates   = df['carbohydrates'].tolist()
+    carbohydrates   = df['carbohydrates'].tolist()
     protein         = df['protein'].tolist()
     fat             = df['fat'].tolist()
    
     south_food = {
         'food'           : food,
-        'carbohydrates'  : carbohydrates
-        'protein'        : protein
+        'carbohydrates'  : carbohydrates,
+        'protein'        : protein,
         'fat'            : fat
         
     }
@@ -27,8 +27,8 @@ def add_row(food, carbohydrates,protein,fat ):
     df = pd.read_csv('values.csv') 
     new_food = {
         'food'           : food,
-        'carbohydrates'  : carbohydrates
-        'protein'        : protein
+        'carbohydrates'  : carbohydrates,
+        'protein'        : protein,
         'fat'            : fat
         
     }
