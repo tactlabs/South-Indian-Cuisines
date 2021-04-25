@@ -4,8 +4,7 @@ import data as fn
 
 
 app = Flask(__name__)
-PORT = 4000
-
+PORT = int(os.environ.get('PORT', 4000))
 
 @app.route("/", methods=["GET", "POST"])
 def startpy():
